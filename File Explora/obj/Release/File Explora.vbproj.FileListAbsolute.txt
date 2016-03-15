@@ -1,0 +1,10 @@
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Release\File Explora.exe.config
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Release\File Explora.exe
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Release\File Explora.pdb
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Release\File Explora.xml
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Release\File_Explora.Form2.resources
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Release\File_Explora.Resources.resources
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Release\File Explora.vbproj.GenerateResource.Cache
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Release\File Explora.exe
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Release\File Explora.xml
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Release\File Explora.pdb

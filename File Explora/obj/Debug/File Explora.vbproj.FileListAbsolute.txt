@@ -9,3 +9,18 @@ C:\Users\jgodwin\bin\_projects\File Explora\File Explora\obj\Debug\File Explora.
 C:\Users\jgodwin\bin\_projects\File Explora\File Explora\obj\Debug\File Explora.pdb
 C:\Users\jgodwin\bin\_projects\File Explora\File Explora\obj\Debug\File_Explora.Form2.resources
 C:\Users\jgodwin\bin\_projects\File Explora\File Explora\obj\Debug\File Explora.vbprojResolveAssemblyReference.cache
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Debug\File Explora.exe.config
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Debug\File Explora.exe.manifest
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Debug\File Explora.application
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Debug\File Explora.exe
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Debug\File Explora.pdb
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\bin\Debug\File Explora.xml
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File_Explora.Form2.resources
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File_Explora.Resources.resources
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File Explora.vbproj.GenerateResource.Cache
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File Explora.TrustInfo.xml
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File Explora.exe.manifest
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File Explora.application
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File Explora.exe
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File Explora.xml
+C:\Users\jgodwin\bin\_projects\File-Explora\File Explora\obj\Debug\File Explora.pdb

@@ -1,6 +1,11 @@
 ﻿Imports System.IO
 Imports System.Windows.Forms
 Imports System.Diagnostics
+Imports System.Security.Permissions
+Imports Microsoft.VisualBasic.FileIO.FileSystem
+
+
+
 
 Public Class Form2
 
@@ -17,7 +22,7 @@ Public Class Form2
     Private Sub PopulateTreeView()
         Dim rootNode As TreeNode
 
-        Dim info As New DirectoryInfo("../..")
+        Dim info As New DirectoryInfo("C:\..")
         If info.Exists Then
             rootNode = New TreeNode(info.Name)
             rootNode.Tag = info
@@ -37,11 +42,27 @@ Public Class Form2
             aNode = New TreeNode(subDir.Name, 0, 0)
             aNode.Tag = subDir
             aNode.ImageKey = "folder"
-            subSubDirs = subDir.GetDirectories()
-            If subSubDirs.Length <> 0 Then
-                GetDirectories(subSubDirs, aNode)
-            End If
-            nodeToAddTo.Nodes.Add(aNode)
+            Try
+                Try
+                    subSubDirs = subDir.GetDirectories()
+                    If subSubDirs.Length <> 0 Then
+                        GetDirectories(subSubDirs, aNode)
+                    End If
+                    nodeToAddTo.Nodes.Add(aNode)
+                Catch ex As System.IO.DirectoryNotFoundException
+
+                    ' Let the user know that the directory did not exist.
+                    MsgBox("Directory not found: " + ex.Message)
+                    subSubDirs = subDir.GetDirectories()
+                    If subSubDirs.Length <> 0 Then
+                        GetDirectories(subSubDirs, aNode)
+                    End If
+                    nodeToAddTo.Nodes.Add(aNode)
+                End Try
+            Catch excpt As UnauthorizedAccessException
+                MsgBox(excpt.Message)
+            End Try
+
         Next subDir
 
     End Sub
