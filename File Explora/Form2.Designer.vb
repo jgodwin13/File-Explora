@@ -38,7 +38,6 @@ Partial Class Form2
         Me.PathVariablesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TaskManagerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -56,6 +55,7 @@ Partial Class Form2
         Me.Button1 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.OptionalFeaturesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +66,7 @@ Partial Class Form2
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(778, 24)
@@ -82,7 +82,7 @@ Partial Class Form2
         '
         'OpenToolStripMenuItem
         '
-        Me.OpenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CommandPromptToolStripMenuItem, Me.PowershellToolStripMenuItem, Me.RegistryEditorToolStripMenuItem, Me.EventViewerToolStripMenuItem, Me.DiskDefragmentToolStripMenuItem, Me.DiskManagementToolStripMenuItem, Me.ControlPanelToolStripMenuItem, Me.PerformanceMonitorToolStripMenuItem, Me.PathVariablesToolStripMenuItem, Me.TaskManagerToolStripMenuItem})
+        Me.OpenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CommandPromptToolStripMenuItem, Me.PowershellToolStripMenuItem, Me.RegistryEditorToolStripMenuItem, Me.EventViewerToolStripMenuItem, Me.DiskDefragmentToolStripMenuItem, Me.DiskManagementToolStripMenuItem, Me.ControlPanelToolStripMenuItem, Me.PerformanceMonitorToolStripMenuItem, Me.PathVariablesToolStripMenuItem, Me.TaskManagerToolStripMenuItem, Me.OptionalFeaturesToolStripMenuItem})
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
@@ -153,12 +153,6 @@ Partial Class Form2
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.AboutToolStripMenuItem.Text = "About"
-        '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.StatusBarPanel3})
@@ -187,8 +181,10 @@ Partial Class Form2
         '
         Me.StatusBarPanel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.StatusBarPanel3.Name = "StatusBarPanel3"
+        Me.StatusBarPanel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StatusBarPanel3.Size = New System.Drawing.Size(39, 17)
         Me.StatusBarPanel3.Text = "Status"
+        Me.StatusBarPanel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'SplitContainer1
         '
@@ -285,6 +281,12 @@ Partial Class Form2
         'Timer1
         '
         '
+        'OptionalFeaturesToolStripMenuItem
+        '
+        Me.OptionalFeaturesToolStripMenuItem.Name = "OptionalFeaturesToolStripMenuItem"
+        Me.OptionalFeaturesToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.OptionalFeaturesToolStripMenuItem.Text = "Optional Features"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -314,7 +316,6 @@ Partial Class Form2
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OpenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CommandPromptToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PowershellToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -344,4 +345,5 @@ Partial Class Form2
     Friend WithEvents PathVariablesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TaskManagerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents OptionalFeaturesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

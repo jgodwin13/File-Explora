@@ -11,6 +11,7 @@ Public Class Form2
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.Timer1.Enabled = True
+        Me.StatusBarPanel3.Text = "Ready..."
     End Sub
 
     Private Sub PopulateTreeView()
@@ -122,40 +123,55 @@ Public Class Form2
     Private Sub CommandPromptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CommandPromptToolStripMenuItem.Click
         'Carries out the command specified by string but CMD still remains open
         Process.Start("CMD", "/K CD C:\")
+        Me.StatusBarPanel3.Text = "Command Prompt Intialized"
     End Sub
 
     Private Sub PowershellToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PowershellToolStripMenuItem.Click
         Process.Start(New ProcessStartInfo() With {.UseShellExecute = True, _
                 .FileName = "powershell", _
                 .WorkingDirectory = "C:\"})
+        Me.StatusBarPanel3.Text = "Powershell Intialized"
     End Sub
 
     Private Sub RegistryEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistryEditorToolStripMenuItem.Click
-        Process.Start("Regedit.exe")
+        Try
+            Process.Start("Regedit.exe")
+            Me.StatusBarPanel3.Text = "Registry Editor Intialized"
+        Catch ex As Exception
+            MsgBox("Registry Editor aborted!")
+        End Try
+
+
     End Sub
 
     Private Sub EventViewerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EventViewerToolStripMenuItem.Click
         Process.Start("eventvwr.exe")
+        Me.StatusBarPanel3.Text = "Event Viewer Intialized"
     End Sub
 
     Private Sub DiskDefragmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiskDefragmentToolStripMenuItem.Click
         Process.Start("dfrgui.exe")
+        Me.StatusBarPanel3.Text = "Disk Defragmenter Intialized"
     End Sub
 
     Private Sub DiskManagementToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiskManagementToolStripMenuItem.Click
         Process.Start("diskmgmt.msc")
+        Me.StatusBarPanel3.Text = "Disk Management Intialized"
     End Sub
 
     Private Sub ControlPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ControlPanelToolStripMenuItem.Click
         Process.Start("control.exe")
+        Me.StatusBarPanel3.Text = "Control Panel Intialized"
     End Sub
 
     Private Sub PerformanceMonitorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PerformanceMonitorToolStripMenuItem.Click
         Process.Start("perfmon.msc")
+        Me.StatusBarPanel3.Text = "Performance Monitor Intialized"
     End Sub
 
     Private Sub PathVariablesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PathVariablesToolStripMenuItem.Click
         Process.Start("SystemPropertiesAdvanced.exe")
+        Me.StatusBarPanel3.Text = "Path Variables Intialized"
     End Sub
 
 
@@ -167,8 +183,12 @@ Public Class Form2
         Else 'Vista / 2008 Server / Win 8 / Win 8.1 / Win 10
             Process.Start("taskmgr")
         End If
+        Me.StatusBarPanel3.Text = "Task Manager Intialized"
     End Sub
 
-
+    Private Sub OptionalFeaturesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionalFeaturesToolStripMenuItem.Click
+        Process.Start("C:\Windows\System32\OptionalFeatures.exe")
+        Me.StatusBarPanel3.Text = "Path Variables Intialized"
+    End Sub
 End Class
 
